@@ -1,0 +1,96 @@
+:root {
+  --safeTop: env(safe-area-inset-top);
+  --safeBtm: env(safe-area-inset-bottom);
+}
+
+.ReactModal__Overlay {
+  position: fixed !important;
+  z-index: 1000;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100vh !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.ReactModal__Content {
+  position: relative !important;
+  vertical-align: middle !important;
+  background: transparent !important;
+  overflow: visible !important;
+  box-shadow: none !important;
+}
+
+.modal-wrap {
+  background: #fff;
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-sizing: border-box;
+  &.lg {
+    width: 800px;
+    .modal-body {
+      padding: 0 30px 60px;
+    }
+    .modal-footer {
+      background: #f1f3f5;
+      padding: 20px;
+    }
+  }
+
+  &.sm {
+    width: 300px !important;
+  }
+  .inner {
+    position: relative;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .ReactModal__Content {
+    margin: 0 !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+    .modal-wrap {
+      width: 90%;
+      .modal-body {
+        .input-group {
+          flex-direction: column;
+          .input + .input {
+            margin-left: 0;
+          }
+        }
+      }
+      &.lg {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        .modal-header {
+          border-radius: 0;
+          position: fixed;
+          width: 100%;
+          top: 0;
+          left: 0;
+        }
+        .inner {
+          height: auto;
+          max-height: calc(100% - 146px + calc(var(--safeBtm) + 20px));
+          padding-top: calc(var(--safeBtm) + 70px);
+          padding-bottom: calc(var(--safeBtm) + 150px);
+          .modal-body {
+            padding-bottom: calc(var(--safeBtm) + 150px);
+          }
+        }
+        .modal-footer {
+          border-radius: 0;
+          position: fixed;
+          width: 100%;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}

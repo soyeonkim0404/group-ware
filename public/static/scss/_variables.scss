@@ -1,0 +1,25 @@
+$safeTop: env(safe-area-inset-top);
+$safeBottom: env(safe-area-inset-bottom);
+$maxLayoutWidth: 1280px;
+$minLayoutWidth: 1024px;
+
+/* Color */
+$white: #fff;
+$black: #212529;
+
+$gray-10: #343a40;
+$gray-20: #495057;
+$gray-30: #868e96;
+$gray-40: #adb5bd;
+$gray-50: #ced4da;
+$gray-60: #dee2e6;
+$gray-70: #e9ecef;
+$gray-80: #f1f3f5;
+$gray-90: #f8f9fa;
+
+$blue: #1976d2;
+$red: #ee2c3c;
+$orange: #ed6c02;
+$green: #2e7d32;
+
+$box-shadow: 0 12px 30px rgba(80, 143, 244, 0.1);
