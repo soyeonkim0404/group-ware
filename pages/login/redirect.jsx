@@ -33,13 +33,13 @@ function Redirect() {
     try {
       const profile = await apiGetProfile();
 
-      if (
+      /*if (
         profile.data.email !== 'admin@emotion.co.kr' &&
         !profile.data.sub &&
         process.env.NODE_ENV === 'production'
       ) {
         return (location.href = `${process.env.NEXT_PUBLIC_API_HOST}/api/v1/oauth2/authorize/azure?type=connect`);
-      }
+      }*/
       dispatch(profileActions.login(profile.data));
 
       const menu = await apiGetMenuList();

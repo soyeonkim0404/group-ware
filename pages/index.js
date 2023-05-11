@@ -63,7 +63,7 @@ function Index() {
     cookies.set('id', selectedEmail, { expires: 365 });
   };
 
-  const onClickLoginButton = async () => {
+  /*const onClickLoginButton = async () => {
     setLoading(true);
     try {
       await apiLogin({
@@ -76,6 +76,10 @@ function Index() {
     } finally {
       setLoading(false);
     }
+  };
+*/
+  const onClickLoginButton = () => {
+      return router.push('/home');
   };
 
   const handleOnKeyPress = async (e) => {
